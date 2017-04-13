@@ -1,0 +1,22 @@
+.funcList{
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+	font-size: 0;
+}
+.funcList li span{
+	color: #000000;
+	font-size: 3rem;
+	box-sizing: border-box;
+	padding: 5px;
+}
+.funcList li{
+	width: 33.3333%;
+	text-align: center;
+	display: inline-block;
+	font-size: 1rem;
+	margin: 1rem 0;
+}
+.funcList li p{
+	padding: 0.5rem 0;
+}

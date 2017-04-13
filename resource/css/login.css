@@ -1,0 +1,12 @@
+.loginSection{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.loginSection form input{
+	margin: 1rem 0;
+}
+.btn-login{
+	background: #f68e1b;
+	color: #000000;
+}
