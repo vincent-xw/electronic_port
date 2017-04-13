@@ -1,0 +1,45 @@
+html{
+	font-size: 14px;
+}
+.headerContainer{
+	background: #b93332;
+}
+.user{
+	display: inline-block;
+	float: left;
+	font-size: 2rem;
+	height: 4.2857rem;
+	line-height: 3.5741rem;
+	padding-left: 1rem;
+	color: #ffffff;
+}
+.title{
+	height: 4.2857rem;
+	line-height: 3.5741rem;
+	color: #ffffff;
+	margin: 0;
+}
+.navTab{
+	width: 100%;
+	border-top: 1px solid #CCCCCC;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	box-sizing: border-box;
+}
+.navTab ul{
+	list-style: none;
+	box-sizing: border-box;
+	font-size: 0;
+	padding: 0;
+}
+.navTab ul li{
+	width: 33.333%;
+	font-size: 1rem;
+	display: inline-block;
+	text-align: center;
+}
+.buttomIcon{
+	font-size: 2rem;
+	padding: 0.5rem 0;
+}

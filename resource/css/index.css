@@ -1,0 +1,24 @@
+.list{
+	width: 100%;
+	height: 3.5714rem;
+	line-height: 3.5741rem;
+	box-sizing: border-box;
+}
+.list ul{
+	list-style: none;
+	box-sizing: border-box;
+	font-size: 0;
+	padding: 0;
+}
+.list ul li{
+	width: 33.333%;
+	font-size: 1rem;
+	display: inline-block;
+	text-align: center;
+	background: #f3f3f3;
+	border-bottom: #cbcbcb 1px solid;
+}
+.list ul li.active{
+	border-bottom: 1px solid #b93332;
+	background: #FFFFFF;
+}
