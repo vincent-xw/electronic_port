@@ -1,8 +1,14 @@
 app.controller('indexCtrl',['$scope','$injector',
 	function($scope,$injector){
 		$injector.invoke(
-			function () {
-				
+			function (indexLouder) {
+				var swiper = new Swiper('.swiper-container', {
+			        pagination: '.swiper-pagination',
+			        paginationClickable: true,
+			        autoplayDisableOnInteraction:false,
+			        loop:true,
+					    autoplay:2000
+			    });
 			}
 		);
 	}
