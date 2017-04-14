@@ -21,6 +21,24 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }]
             }
         })
+        .state('newsDetail', {
+            url: '/newsDetail',
+            views: {
+                '': {
+                    templateUrl: 'tpl/newsDetail.html',
+                    controller: 'newsDetailCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'css/newsDetail.css',
+                        'js/controller/newsDetailCtrl.js',
+                        'js/service/newsDetailModule.js'
+                        ]);
+                }]
+            }
+        })
         .state('search', {
             url: '/search',
             views: {
@@ -35,6 +53,25 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                         'css/search.css',
                         'js/controller/searchCtrl.js',
                         'js/service/searchModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('searchList', {
+            url: '/searchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/searchList.html',
+                    controller: 'searchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'css/newsDetail.css',
+                        'css/searchList.css',
+                        'js/controller/searchListCtrl.js',
+                        'js/service/searchListModule.js'
                         ]);
                 }]
             }

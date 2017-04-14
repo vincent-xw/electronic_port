@@ -1,0 +1,20 @@
+.contentDetail ul{
+	list-style: none;
+	box-sizing: border-box;
+	padding-left: 0;
+	max-height: 100%;
+	overflow: auto;
+}
+.contentDetail ul li{
+	padding: 1rem 0;
+	border-top: 1px solid #dddddd;
+}
+.contentDetail ul li .searchTitle{
+	font-weight: bold;
+	display: inline-block;
+	width: 20%;
+}
+.contentDetail ul li .content{
+	display: inline-block;
+	width: 80%;
+}
