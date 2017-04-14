@@ -16,8 +16,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                     return $ocLazyLoad.load([
                         'css/index.css',
                         'js/controller/indexCtrl.js',
-                        'js/service/indexModule.js',
-                        'js/controller/commonCtrl.js'
+                        'js/service/indexModule.js'
                         ]);
                 }]
             }
@@ -35,8 +34,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                     return $ocLazyLoad.load([
                         'css/search.css',
                         'js/controller/searchCtrl.js',
-                        'js/service/searchModule.js',
-                        'js/controller/commonCtrl.js'
+                        'js/service/searchModule.js'
                         ]);
                 }]
             }
@@ -54,8 +52,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                     return $ocLazyLoad.load([
                         'css/login.css',
                         'js/controller/loginCtrl.js',
-                        'js/service/loginModule.js',
-                        'js/controller/commonCtrl.js'
+                        'js/service/loginModule.js'
                         ]);
                 }]
             }
@@ -66,13 +63,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 '': {
                     templateUrl: 'tpl/404.html'
                 }
-            },
-            resolve: { 
-                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                        'js/controller/commonCtrl.js'
-                        ]);
-                }]
             }
         })
     }]);
