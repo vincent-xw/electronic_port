@@ -9,6 +9,9 @@ app.controller('indexCtrl',['$scope','$injector',
 			        loop:true,
 					    autoplay:2000
 			    });
+			    indexLouder.getListinfo().then(function(resp){
+			    	$scope.newList = resp.data;
+			    });
 			}
 		);
 	}

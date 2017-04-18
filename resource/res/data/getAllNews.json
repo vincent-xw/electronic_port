@@ -1,0 +1,24 @@
+{
+  "status": 200,
+  "msg": "成功",
+  "data": {
+    "newsList1": [
+      {
+        "guid": "1234",
+        "newsTitle": "最大新闻"
+      }
+    ],
+    "newsList2": [
+      {
+        "guid": "2134",
+        "newsTitle": "通知公告"
+      }
+    ],
+    "newsList3": [
+      {
+        "guid": "3214",
+        "newsTitle": "高风险"
+      }
+    ]
+  }
+}

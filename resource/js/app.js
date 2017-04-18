@@ -22,4 +22,5 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
             //events: true
         });
     }])
+    
 ;

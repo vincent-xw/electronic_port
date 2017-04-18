@@ -31,24 +31,13 @@
 	</section>
 	<section class="infoList">
 		<ul>
-			<li>
+			<li ng-repeat="data in newList.newsList1">
 				<div>
-					<h4>标题标题标题标题</h4>
+					<h4 ng-bind="data.newsTitle">标题标题标题标题</h4>
 					<p class="time"><span>2017年4月13日</span></p>
 				</div>
 			</li>
-			<li>
-				<div>
-					<h4>标题标题标题标题</h4>
-					<p class="time"><span>2017年4月13日</span></p>
-				</div>
-			</li>
-			<li>
-				<div>
-					<h4>标题标题标题标题</h4>
-					<p class="time"><span>2017年4月13日</span></p>
-				</div>
-			</li>
+			
 		</ul>
 	</section>
 </div>

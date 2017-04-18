@@ -4,7 +4,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
         $urlRouterProvider.otherwise("/404");
         $stateProvider
         .state('index', {
-            url: '',
+            url: '/',
             views: {
                 '': {
                     templateUrl: 'tpl/index.html',
@@ -120,4 +120,12 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }
             }
         })
-    }]);
+    }])
+    // .config(['$locationProvider', function ($locationProvider) {
+
+    //     $locationProvider.html5Mode({
+    //       enabled: true,
+    //       requireBase: false
+    //     });
+    // }])
+;
