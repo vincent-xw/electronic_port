@@ -12,6 +12,9 @@ app.controller('indexCtrl',['$scope','$injector',
 			    indexLouder.getListinfo().then(function(resp){
 			    	$scope.newList = resp.data;
 			    });
+			    indexLouder.getCarouselImages().then(function(resp){
+			    	$scope.newImgList = resp.data;
+			    });
 			}
 		);
 	}

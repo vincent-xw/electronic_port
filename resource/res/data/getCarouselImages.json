@@ -1,0 +1,26 @@
+{
+  "code": "200",
+  "msg": "查询成功！",
+  "data": [
+    {
+      "guid": "ed7ab99d-ab5e-4fd3-8859-25f9cba29bd3",
+      "picdesc": "出入境检疫工作人员审核旅客《出入境健康申明卡》",
+      "pictureurl": "res/img/1.jpg"
+    },
+    {
+      "guid": "1b6c587f-fae4-44ef-94ca-14bccbd200cf",
+      "picdesc": "DDD",
+      "pictureurl": "res/img/2.jpg"
+    },
+    {
+      "guid": "61fec918-3728-40a9-a153-7107bff2cbc9",
+      "picdesc": "1",
+      "pictureurl": "res/img/3.jpg"
+    },
+    {
+      "guid": "1d9ec7bd-27e4-48b4-8d9a-cb8aef6dc0ba",
+      "picdesc": "港口",
+      "pictureurl": "res/img/4.jpg"
+    }
+  ]
+}

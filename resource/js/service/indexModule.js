@@ -16,6 +16,23 @@ app.factory('indexLouder',function($http){
                 return resp;
 
               });
+        },
+        'getCarouselImages':function(){
+            
+          var url = 'res/data/getCarouselImages.json';
+
+          return $http.get(url).then(
+
+              function(resp){
+
+                return resp;
+
+              },
+              function(resp){
+
+                return resp;
+
+              });
         }
       };
   });
