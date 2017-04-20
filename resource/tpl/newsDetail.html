@@ -4,15 +4,15 @@
 </div>
 <div class="contentContainer">
 	<section class="headerDetail">
-		<h4 class="text-center">标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+		<h4 class="text-center" ng-bind="newsInfo.data.newsTitle"></h4>
 		<p class="text-right">
-			<span>来源:</span><span>北京海关</span> 
-			<span>时间:</span><span>2017年4月14日</span> 
-			<span>作者:</span><span>北京海关</span> 
+			<span>来源:</span><span ng-bind="newsInfo.data.newsSource"></span> 
+			<span>时间:</span><span ng-bind="newsInfo.data.releaseTime | date:'yyyy-MM-dd'"></span> 
+			<span>作者:</span><span ng-bind="newsInfo.data.newsOwner"></span> 
 		</p>
 	</section>
 	<section class="contentDetail">
-		<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+		<p ng-bind="newsInfo.data.newsContent"></p>
 	</section>
 </div>
 <div ng-include="'tpl/common/bottom.html'"></div>

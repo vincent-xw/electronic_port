@@ -1,0 +1,18 @@
+{
+  "code": "200",
+  "msg": "查询成功！",
+  "data": {
+    "id": null,
+    "version": 0,
+    "createTime": 1490803200000,
+    "guid": "10",
+    "newsType": "1",
+    "newsTitle": "10",
+    "newsContent": "1",
+    "newsSource": "1",
+    "releaseTime": 1490803200000,
+    "newsOwner": "admin",
+    "sendUid": "owinfo",
+    "sendNo": "10"
+  }
+}

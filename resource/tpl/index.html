@@ -10,29 +10,21 @@
 	<section class="rotation">
 		<div class="swiper-container">
 	        <div class="swiper-wrapper">		
-				<div class="swiper-slide">
+				<div ng-repeat="data in newImgList.data" class="swiper-slide">
 					<a href="javascript:;">
-						<img src="res/img/1.jpg" alt="">
+						<span ng-bind="data.picdesc"></span>
+						<img ng-src="{{data.pictureurl}}"  alt="">
 					</a>
 				</div>
-				<div class="swiper-slide">
-					<a href="javascript:;">
-						<img src="res/img/2.jpg" alt="">
-					</a>
-				</div>
-				<div class="swiper-slide">
-					<a href="javascript:;">
-						<img src="res/img/3.jpg" alt="">
-					</a>
-				</div>
+				
 	        </div>
         	<div class="swiper-pagination"></div>
     	</div>
 	</section>
 	<section class="infoList">
 		<ul>
-			<li ng-repeat="data in newList.newsList1">
-				<div>
+			<li ng-repeat="data in newList.data">
+				<div ng-click="gotoDetail(data.guid)">
 					<h4 ng-bind="data.newsTitle">标题标题标题标题</h4>
 					<p class="time"><span>2017年4月13日</span></p>
 				</div>

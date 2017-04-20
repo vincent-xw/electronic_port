@@ -11,7 +11,7 @@ html{
 }
 .user{
 	display: inline-block;
-	float: left;
+	position: absolute;
 	font-size: 2rem;
 	height: 4.2857rem;
 	line-height: 4.2857rem;

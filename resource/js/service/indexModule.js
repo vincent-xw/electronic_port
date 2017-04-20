@@ -4,6 +4,7 @@ app.factory('indexLouder',function($http){
 
           var url = 'res/data/getAllNews.json';
 
+
           return $http.get(url).then(
 
               function(resp){
@@ -18,7 +19,7 @@ app.factory('indexLouder',function($http){
               });
         },
         'getCarouselImages':function(){
-            
+
           var url = 'res/data/getCarouselImages.json';
 
           return $http.get(url).then(

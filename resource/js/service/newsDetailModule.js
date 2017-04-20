@@ -1,8 +1,8 @@
 app.factory('newsDetailLouder',function($http){
   return {
-        'getListinfo':function(){
+        'getNewsinfo':function(){
 
-          var url = '/data/index_list_info.json';
+          var url = 'res/data/newsDetailInfo.json';
 
           return $http.get(url).then(
 
