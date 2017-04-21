@@ -1,4 +1,4 @@
-var app = angular.module('app', ['oc.lazyLoad','ui.router']);
+var app = angular.module('app', ['oc.lazyLoad','ui.router','angular-loading-bar']);
 
 
 app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$provide',
@@ -22,5 +22,23 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
             //events: true
         });
     }])
-    
-;
+    .factory('sessionInjector', [function() {
+        var sessionInjector = {
+            request: function(config) {
+                console.log(config);
+
+                if(config.url.indexOf("tpl") != -1 || config.url.indexOf("css") != -1 || config.url.indexOf("js") != -1){
+                    
+                }else{
+                   config.url ="http://192.168.6.78:8080"+config.url; 
+                }
+                
+                return config;
+            }
+        };
+        return sessionInjector;
+    }])
+    .config(['$httpProvider', function($httpProvider) {
+        $httpProvider.interceptors.push('sessionInjector');
+    }])
+;   

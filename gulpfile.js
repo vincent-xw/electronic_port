@@ -5,7 +5,7 @@ var ngannotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var webserver = require('gulp-webserver');
-
+var Proxy = require('gulp-connect-proxy');
 
 gulp.task('minify-css', function() {
   return gulp.src('source/css/*.css')

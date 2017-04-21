@@ -1,10 +1,10 @@
 app.factory('newsDetailLouder',function($http){
   return {
-        'getNewsinfo':function(){
+        'getNewsinfo':function(data){
 
-          var url = 'res/data/newsDetailInfo.json';
+          var url = '/bjport-web-interface/appnews/getNewDetails';
 
-          return $http.get(url).then(
+          return $http.post(url,data).then(
 
               function(resp){
 
