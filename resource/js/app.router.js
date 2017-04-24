@@ -1,10 +1,10 @@
 app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvider',
     function ($stateProvider, $urlRouterProvider, $provide ,$ocLazyLoadProvider) {
         app.constant = $provide.constant;
-        $urlRouterProvider.otherwise("/404");
+        $urlRouterProvider.otherwise("/index");
         $stateProvider
         .state('index', {
-            url: '',
+            url: '/index',
             views: {
                 '': {
                     templateUrl: 'tpl/index.html',

@@ -18,3 +18,10 @@
 	display: inline-block;
 	width: 80%;
 }
+.contentDetail .searchTitle{
+	font-size: 23px;
+}
+.contentDetail .content{
+	font-size: 20px;
+	color: #9B9B9B;
+}

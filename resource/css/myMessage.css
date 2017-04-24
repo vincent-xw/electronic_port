@@ -6,11 +6,11 @@
 	padding: 0;
 }
 .infoList ul li{
-	border-top: 1px solid #a6a6a6;
+	border-top: 1px solid #9c9b9b	;
 	padding: 10px;
 }
 .infoList ul li .time{
-	text-align: right;
+	text-align: left;
 	color: #979797;
 	font-size: 0.9rem;
 }
@@ -32,5 +32,17 @@
 	color: #000000;
 	top: 0;
 	font-size: 2rem;
+	line-height: 50px;
 	opacity: 1;
+}
+.infoList .title{
+	color: #505050;
+	font-size: 16px;
+	height: 3rem;
+	line-height: 3rem;
+	margin: 0;
+}
+.infoList .content{
+	font-size: 14px;
+	color: #9B9B9B;
 }
