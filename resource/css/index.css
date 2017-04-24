@@ -16,16 +16,15 @@
 	display: inline-block;
 	text-align: center;
 	background: #f3f3f3;
-	border-bottom: #cbcbcb 1px solid;
+	border-bottom: #e5e5e5 1px solid;
 }
 .list ul li.active{
-	border-bottom: 1px solid #b93332;
+	border-bottom: 1px solid #d33b30;
 	background: #FFFFFF;
 }
 .rotation{
 	width: 100%;
 	box-sizing: border-box;
-	padding: 10px;
 }
 .rotation img{
 	width: 100%;
@@ -38,7 +37,7 @@
 	padding: 0;
 }
 .infoList ul li{
-	border-top: 1px solid #a6a6a6;
+	border-top: 1px solid #e5e5e5;
 	padding: 10px;
 }
 .infoList ul li .time{
@@ -56,4 +55,6 @@
     padding: 1rem;
     width: 100%;
     font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

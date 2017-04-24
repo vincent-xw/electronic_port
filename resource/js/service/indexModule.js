@@ -1,11 +1,11 @@
 app.factory('indexLouder',function($http){
   return {
-        'getListinfo':function(){
+        'getListinfo':function(data){
 
-          var url = 'res/data/getAllNews.json';
+          var url = '/bjport-web-interface/appnews/getNews';
 
 
-          return $http.get(url).then(
+          return $http.post(url,data).then(
 
               function(resp){
 
@@ -20,9 +20,9 @@ app.factory('indexLouder',function($http){
         },
         'getCarouselImages':function(){
 
-          var url = 'res/data/getCarouselImages.json';
+          var url = '/bjport-web-interface/appimages/getImages';
 
-          return $http.get(url).then(
+          return $http.post(url).then(
 
               function(resp){
 

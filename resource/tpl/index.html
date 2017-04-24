@@ -8,9 +8,9 @@
 		</ul>
 	</div>
 	<section class="rotation">
-		<div class="swiper-container">
+		<div class="swiper-container" style="height: 200px; ">
 	        <div class="swiper-wrapper">		
-				<div ng-repeat="data in newImgList.data" class="swiper-slide">
+				<div ng-repeat="data in newImgList track by $index" repeat-finish="initSlider()" class="swiper-slide" >
 					<a href="javascript:;">
 						<span ng-bind="data.picdesc"></span>
 						<img ng-src="{{data.pictureurl}}"  alt="">
@@ -23,7 +23,7 @@
 	</section>
 	<section class="infoList">
 		<ul>
-			<li ng-repeat="data in newList.data">
+			<li ng-repeat="data in newList.data.dataValue">
 				<div ng-click="gotoDetail(data.guid)">
 					<h4 ng-bind="data.newsTitle">标题标题标题标题</h4>
 					<p class="time"><span>2017年4月13日</span></p>

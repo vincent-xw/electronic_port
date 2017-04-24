@@ -25,12 +25,13 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
     .factory('sessionInjector', [function() {
         var sessionInjector = {
             request: function(config) {
-                console.log(config);
 
                 if(config.url.indexOf("tpl") != -1 || config.url.indexOf("css") != -1 || config.url.indexOf("js") != -1){
                     
                 }else{
-                   config.url ="http://192.168.6.78:8080"+config.url; 
+                   // config.url ="http://192.168.6.78:8080"+config.url; 
+                   config.url ="http://192.168.2.102:8080"+config.url; 
+                   // config.url ="http://192.168.6.116:7080"+config.url; 
                 }
                 
                 return config;
