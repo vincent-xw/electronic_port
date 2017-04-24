@@ -2,35 +2,39 @@
 <div class="contentContainer">
 	<div class="list">
 		<ul>
-			<li class="active">新闻资讯</li>
-			<li >通知通告</li>
-			<li >高风险物品及疫情</li>
+			<li ng-class="{'active':tabs.tab1}" ng-click="tabs.switchTab(1)">新闻资讯</li>
+			<li ng-class="{'active':tabs.tab2}" ng-click="tabs.switchTab(2)">通知通告</li>
+			<li ng-class="{'active':tabs.tab3}" ng-click="tabs.switchTab(3)">高风险物品及疫情</li>
 		</ul>
 	</div>
-	<section class="rotation">
-		<div class="swiper-container">
-	        <div class="swiper-wrapper">		
-				<div ng-repeat="data in newImgList.data" class="swiper-slide">
-					<a href="javascript:;">
-						<span ng-bind="data.picdesc"></span>
-						<img ng-src="{{data.pictureurl}}"  alt="">
-					</a>
-				</div>
+	<div ng-class="{'hidden':!tabs.tab1}">
+		<section class="rotation">
+			<div class="swiper-container">
+		        <div class="swiper-wrapper">		
+					<div ng-repeat="data in newImgList.data" class="swiper-slide">
+						<a href="javascript:;">
+							<span ng-bind="data.picdesc"></span>
+							<img ng-src="{{data.pictureurl}}"  alt="">
+						</a>
+					</div>
+					
+		        </div>
+	        	<div class="swiper-pagination"></div>
+	    	</div>
+		</section>
+		<section class="infoList">
+			<ul>
+				<li ng-repeat="data in newList.data">
+					<div ng-click="gotoDetail(data.guid)">
+						<h4 ng-bind="data.newsTitle">标题标题标题标题</h4>
+						<p class="time"><span>2017年4月13日</span></p>
+					</div>
+				</li>
 				
-	        </div>
-        	<div class="swiper-pagination"></div>
-    	</div>
-	</section>
-	<section class="infoList">
-		<ul>
-			<li ng-repeat="data in newList.data">
-				<div ng-click="gotoDetail(data.guid)">
-					<h4 ng-bind="data.newsTitle">标题标题标题标题</h4>
-					<p class="time"><span>2017年4月13日</span></p>
-				</div>
-			</li>
-			
-		</ul>
-	</section>
+			</ul>
+		</section>
+	</div>
+	<div ng-class="{'hidden':!tabs.tab2}">tab2</div>
+	<div ng-class="{'hidden':!tabs.tab3}">tab3</div>
 </div>
 <div ng-include="'tpl/common/bottom.html'"></div>

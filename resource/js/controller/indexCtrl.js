@@ -18,7 +18,18 @@ app.controller('indexCtrl',['$scope','$injector',
    						observeParents:true
 				    });
 			    });
-
+			    $scope.tabs = {
+			    	"tab1":true,
+			    	"tab2":false,
+			    	"tab3":false,
+			    	"switchTab":function(id){
+			    		this.tab1 = false;
+			    		this.tab2 = false;
+			    		this.tab3 = false;
+			    		this["tab"+id] = true;
+			    		
+			    	}
+			    }
 			    $scope.gotoDetail = function(id){
 			    	location.href="#!/newsDetail?id="+id;
 			    }
