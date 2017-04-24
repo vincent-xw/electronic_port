@@ -1,10 +1,10 @@
 app.factory('loginLouder',function($http){
   return {
-        'getListinfo':function(){
+        'login':function(data){
 
-          var url = '/data/index_list_info.json';
+          var url = '/bjport-web-interface/applogin/login';
 
-          return $http.get(url).then(
+          return $http.post(url,data).then(
 
               function(resp){
 

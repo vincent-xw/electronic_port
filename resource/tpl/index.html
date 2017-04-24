@@ -7,8 +7,8 @@
 			<li ng-class="{'active':tabs.tab3}" ng-click="tabs.switchTab(3)">高风险物品及疫情</li>
 		</ul>
 	</div>
-	<div ng-class="{'hidden':!tabs.tab1}">
-		<section class="rotation">
+	<div >
+		<section class="rotation" ng-class="{'hidden':!tabs.tab1}">
 			<div class="swiper-container">
 		        <div class="swiper-wrapper">		
 					<div ng-repeat="data in newImgList.data" class="swiper-slide">
@@ -24,17 +24,17 @@
 		</section>
 		<section class="infoList">
 			<ul>
-				<li ng-repeat="data in newList.data">
+				<li ng-repeat="data in newList.data.dataValue">
 					<div ng-click="gotoDetail(data.guid)">
-						<h4 ng-bind="data.newsTitle">标题标题标题标题</h4>
-						<p class="time"><span>2017年4月13日</span></p>
+						<h4 ng-bind="data.newsTitle"></h4>
+						<p class="time"><span ng-bind="data.releaseTime | date:'yyyy-MM-dd'"></span></p>
 					</div>
 				</li>
 				
 			</ul>
 		</section>
 	</div>
-	<div ng-class="{'hidden':!tabs.tab2}">tab2</div>
-	<div ng-class="{'hidden':!tabs.tab3}">tab3</div>
+
+	
 </div>
 <div ng-include="'tpl/common/bottom.html'"></div>
