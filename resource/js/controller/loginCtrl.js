@@ -1,4 +1,4 @@
-app.controller('loginCtrl',['$scope','$injector',
+app.controller('loginCtrl',['$scope','$injector','storageService',
 	function($scope,$injector){
 		$injector.invoke(
 			function (loginLouder) {
@@ -10,7 +10,8 @@ app.controller('loginCtrl',['$scope','$injector',
 					};
 					loginLouder.login(data).then(function(resp){
 						if(resp.data.code == "200"){
-							window.location.href="#!/myMessage"
+							storageService.setUserInfo(resp.data.formData);
+							window.location.href="#!/myMessage";
 						}else{
 							alert('登录失败');
 						}
