@@ -1,10 +1,10 @@
 app.factory('myMessageLouder',function($http){
   return {
-        'getListinfo':function(){
+        'getListinfo':function(data){
 
-          var url = '/data/index_list_info.json';
+          var url = '/bjport-web-interface/appmessage/getMessageList';
 
-          return $http.get(url).then(
+          return $http.post(url,data).then(
 
               function(resp){
 

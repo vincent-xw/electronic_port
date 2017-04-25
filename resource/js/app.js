@@ -22,7 +22,7 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
             //events: true
         });
     }])
-    .factory('sessionInjector', [function() {
+    .factory('sessionInjector', ['storageService',function(storageService) {
         var sessionInjector = {
             request: function(config) {
 
@@ -30,8 +30,11 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
                     
                 }else{
                    // config.url ="http://192.168.6.78:8080"+config.url; 
-                   // config.url ="http://192.168.2.102:8080"+config.url; 
-                   config.url ="http://192.168.6.116:7080"+config.url; 
+                   // config.url ="http://192.168.2.102:8080"+config.url;
+                   if(storageService.getUserInfo() != -1){
+                        config.headers["user_token"]=storageService.getUserInfo().userNo;
+                   } 
+                   config.url ="http://192.168.6.116:7080"+config.url;
                 }
                 
                 return config;

@@ -13,10 +13,12 @@
 .funcList li{
 	width: 33.3333%;
 	text-align: center;
-	display: inline-block;
+	float: left;
 	font-size: 1rem;
 	margin: 1rem 0;
+	cursor: pointer;
 }
 .funcList li p{
-	padding: 0.5rem 0;
+    padding: 0.5rem 0;
+    height: 2.5rem;
 }
