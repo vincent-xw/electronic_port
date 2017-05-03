@@ -3,7 +3,7 @@ app.controller('newsDetailCtrl',['$scope','$injector','$location',
 		$injector.invoke(
 			function (newsDetailLouder) {
 				$scope.search = $location.search();
-				if($scope.search.type="regulation"){
+				if($scope.search.type == "regulation"){
 					$scope.title="口岸政策法规";
 					
 
@@ -23,9 +23,9 @@ app.controller('newsDetailCtrl',['$scope','$injector','$location',
 						};
 
 					});
-				}else if($scope.search.type="guide"){
-					$scope.title="企业办事指南";
+				}else if($scope.search.type == "guide"){
 					
+					$scope.title="企业办事指南";
 
 					var data = {
 						"guid":$scope.search.id

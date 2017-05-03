@@ -12,7 +12,7 @@
 		</p>
 	</section>
 	<section class="contentDetail">
-		<p ng-bind="newsInfo.data.newsContent"></p>
+		<p ng-bind-html="newsInfo.data.newsContent | to_trusted"></p>
 	</section>
 </div>
 <div ng-include="'tpl/common/bottom.html'"></div>

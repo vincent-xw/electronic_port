@@ -1,10 +1,17 @@
 <div class="headerContainer">
 	<h4 class="text-center title" ng-bind="title"></h4 class="text-center">
 </div>
-<section class="loginSection">
+<section class="loginSection" ng-if="!status">
 	<form class="">
 		<input class="login_input" type="text" placeholder="请输入用户名" ng-model="login.userNo">
 		<input class="login_input" type="password" placeholder="请输入密码" ng-model="login.userPwd">
 		<button class="login_btn" ng-click="login(login)" ng-bind="loginTips?'登录中...':'登录'" ng-disabled="loginTips"></button>
+	</form>
+</section>
+<section class="loginSection" ng-if="status">
+	<form class="">
+		<p>当前登录的用户：</p>
+		<p ng-bind="loginInfo.user.userName"></p>
+		<button class="login_btn" ng-click="logout()" ng-disabled="loginTips">注销</button>
 	</form>
 </section>

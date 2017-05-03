@@ -2,6 +2,12 @@ app.controller('loginCtrl',['$scope','$injector','storageService',
 	function($scope,$injector){
 		$injector.invoke(
 			function (loginLouder,storageService) {
+				$scope.loginInfo = storageService.getUserInfo();
+
+				$scope.status = storageService.getUserInfo() == -1?false:true;
+				$scope.logout = function(){
+					storageService.clearInfo();
+				}
 				$scope.title="登录";
 				$scope.login = function(data){
 					var data = {
