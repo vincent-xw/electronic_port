@@ -76,6 +76,25 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }]
             }
         })
+        .state('searchListContent', {
+            url: '/searchListContent',
+            views: {
+                '': {
+                    templateUrl: 'tpl/searchListContent.html',
+                    controller: 'searchListContentCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'css/newsDetail.css',
+                        'css/searchList.css',
+                        'js/controller/searchListContentCtrl.js',
+                        'js/service/searchListContentModule.js'
+                        ]);
+                }]
+            }
+        })
         .state('login', {
             url: '/login',
             views: {

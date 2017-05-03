@@ -1,0 +1,28 @@
+<div ng-include="'tpl/common/messageheader.html'"></div>
+<div class="contentContainer">
+	<section class="headerDetail">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="searchStr">
+			<span class="input-group-btn">
+			<button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button>
+			</span>
+		</div>
+	</section>
+	<section class="contentDetail">
+		<ul>
+			<li ng-repeat="data in regulationList">
+				<div>
+					<p><span class="searchTitle">标题 :&nbsp; </span><span class="content" ng-bind="data.title"></span></p>
+					<p><span class="searchTitle">发布部门 :&nbsp; </span><span class="content" ng-bind="data.publishdept"></span></p>
+					<p><span class="searchTitle">发布内容 :&nbsp; </span><span class="content" ng-bind-html="data.content | to_trusted" ></span></p>
+				</div>
+			</li>
+			<li ng-if="regulationList.length == 0">
+				<div>
+					<p>暂未查询到相关信息，请稍后再试</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+</div>
+<div ng-include="'tpl/common/bottom.html'"></div>

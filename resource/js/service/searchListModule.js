@@ -33,6 +33,23 @@ app.factory('searchListLouder',function($http){
                 return resp.data;
 
               });
+        },
+        'getRiskList':function(data){
+
+          var url = '/bjport-web-interface/appgfxyq/getGfxyq';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
         }
       };
   });
