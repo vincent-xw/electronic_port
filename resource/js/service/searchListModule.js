@@ -1,19 +1,36 @@
 app.factory('searchListLouder',function($http){
   return {
-        'getListinfo':function(){
+        'getRegulationList':function(data){
 
-          var url = '/data/index_list_info.json';
+          var url = '/bjport-web-interface/apppolicy/getPolicyList';
 
-          return $http.get(url).then(
+          return $http.post(url,data).then(
 
               function(resp){
 
-                return resp;
+                return resp.data;
 
               },
               function(resp){
 
-                return resp;
+                return resp.data;
+
+              });
+        },
+        'getGuideList':function(data){
+
+          var url = '/bjport-web-interface/appguide/getGuideList';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
 
               });
         }

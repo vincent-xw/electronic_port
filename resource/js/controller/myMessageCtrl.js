@@ -11,7 +11,12 @@ app.controller('myMessageCtrl',['$scope','$injector','storageService',
 						"inputstr":$scope.inputstr
 					}
 					myMessageLouder.getListinfo(data).then(function(resp){
-						$scope.listInfo = resp.data;
+						if(resp.data.code == 401){
+							window.location.href = "#!/login"
+						}else{
+							$scope.listInfo = resp.data;
+						}
+						
 					});
 				}
 			}

@@ -2,22 +2,26 @@
 <div class="contentContainer">
 	<section class="headerDetail">
 		<div class="input-group">
-			<input type="text" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1">
+			<input type="text" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="searchStr">
 			<span class="input-group-btn">
-			<button class="btn btn-primary" type="button">搜索</button>
+			<button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button>
 			</span>
 		</div>
 	</section>
 	<section class="contentDetail">
 		<ul>
-			<li>
+			<li ng-repeat="data in regulationList.dataValue">
 				<div>
-					<p><span class="searchTitle">标题:</span><span class="content">标题标题标题标题</span></p>
-					<p><span class="searchTitle">发布部门:</span><span class="content">标题标题标题标题</span></p>
-					<p><span class="searchTitle">发布内容:</span><span class="content">标题标题标题标题</span></p>
+					<p><span class="searchTitle">标题 :&nbsp; </span><span class="content" ng-bind="data.subject"></span></p>
+					<p><span class="searchTitle">发布部门 :&nbsp; </span><span class="content" ng-bind="data.creatorname"></span></p>
+					<p><span class="searchTitle">发布时间 :&nbsp; </span><span class="content" ng-bind="data.createtime | date:'yyyy-MM-dd'"></span></p>
 				</div>
 			</li>
-			
+			<li ng-if="regulationList.dataValue.length == 0">
+				<div>
+					<p>暂未查询到相关信息，请稍后再试</p>
+				</div>
+			</li>
 		</ul>
 	</section>
 </div>
