@@ -10,14 +10,20 @@
 	</section>
 	<section class="contentDetail">
 		<ul>
-			<li ng-repeat="data in regulationList.dataValue">
-				<div>
+			<li ng-repeat="data in regulationList">
+				<div ng-click="goToDetail(data)">
 					<p><span class="searchTitle">标题 :&nbsp; </span><span class="content" ng-bind="data.subject"></span></p>
 					<p><span class="searchTitle">发布部门 :&nbsp; </span><span class="content" ng-bind="data.creatorname"></span></p>
 					<p><span class="searchTitle">发布时间 :&nbsp; </span><span class="content" ng-bind="data.createtime | date:'yyyy-MM-dd'"></span></p>
 				</div>
 			</li>
-			<li ng-if="regulationList.dataValue.length == 0">
+			<li class="text-center" ng-if="ajaxData.pageNum < ajaxData.pageCount">
+				<a href="javascript:;" ng-click="loadMore(ajaxData.pageNum)">点击加载更多</a>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum >= ajaxData.pageCount">
+				<a href="javascript:;">没有更多了</a>
+			</li>
+			<li ng-if="regulationList.length == 0">
 				<div>
 					<p>暂未查询到相关信息，请稍后再试</p>
 				</div>
