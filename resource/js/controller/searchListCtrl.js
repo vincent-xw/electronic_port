@@ -18,6 +18,10 @@ app.controller('searchListCtrl',['$scope','$injector','$location',
 						});
 					}
 					$scope.searchFunction();
+					$scope.goToDetail = function(data){
+						
+						window.location.href = "#!/newsDetail?type=regulation&id="+data.guid;
+					}
 					
 					
 				}else if($scope.search.type == "guide"){
@@ -37,7 +41,12 @@ app.controller('searchListCtrl',['$scope','$injector','$location',
 						});
 					}
 					$scope.searchFunction();
+					$scope.goToDetail = function(data){
+						
+						window.location.href = "#!/newsDetail?type=guide&id="+data.guid;
+					}
 				}
+
 				$scope.clickSearch = function(){
 					$scope.searchData.pageNum = 0;
 					$scope.searchData.inputstr = $scope.searchStr;
@@ -47,9 +56,7 @@ app.controller('searchListCtrl',['$scope','$injector','$location',
 					$scope.searchData.pageNum=pageNum +1;
 					$scope.searchFunction();
 				}
-				$scope.goToDetail = function(data){
-
-				}
+				
 				// $('.contentDetail').dropload({
 				//     scrollArea : window,
 				//     loadDownFn : function(me){
