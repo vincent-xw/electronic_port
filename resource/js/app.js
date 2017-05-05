@@ -50,6 +50,10 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
                     }else{
                         console.log(response.data);
                         if(response.data.code != 200){
+                            if(response.data.code == 401){
+                                storageService.clearInfo();
+                                window.location.href="#!/login";
+                            }
                             if(response.data.msg){
                                 console.log(response.data.msg);
                             }else{

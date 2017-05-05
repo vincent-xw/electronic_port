@@ -7,6 +7,7 @@ app.controller('loginCtrl',['$scope','$injector','storageService',
 				$scope.status = storageService.getUserInfo() == -1?false:true;
 				$scope.logout = function(){
 					storageService.clearInfo();
+					location.reload(true);
 				}
 				$scope.title="登录";
 				$scope.login = function(data){

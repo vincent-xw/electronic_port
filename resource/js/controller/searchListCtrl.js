@@ -48,13 +48,15 @@ app.controller('searchListCtrl',['$scope','$injector','$location',
 				}
 
 				$scope.clickSearch = function(){
-					$scope.searchData.pageNum = 0;
+					$scope.searchData.pageNum = 1;
 					$scope.searchData.inputstr = $scope.searchStr;
+					$scope.regulationList = [];
 					$scope.searchFunction();
 				}
 				$scope.loadMore = function(pageNum){
 					$scope.searchData.pageNum=pageNum +1;
 					$scope.searchFunction();
+
 				}
 				
 				// $('.contentDetail').dropload({

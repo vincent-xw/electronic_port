@@ -131,6 +131,24 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }]
             }
         })
+        .state('myMessageDetail', {
+            url: '/myMessageDetail',
+            views: {
+                '': {
+                    templateUrl: 'tpl/myMessageDetail.html',
+                    controller: 'myMessageDetailCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'css/myMessage.css',
+                        'js/controller/myMessageDetailCtrl.js',
+                        'js/service/myMessageDetailModule.js'
+                        ]);
+                }]
+            }
+        })
         .state('404', {
             url: '/404',
             views: {

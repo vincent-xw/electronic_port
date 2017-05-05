@@ -2,9 +2,10 @@ app.controller('indexCtrl',['$scope','$injector',
 	function($scope,$injector){
 		$injector.invoke(
 			function (indexLouder) {
+				$scope.title = "北京国际贸易单一窗口";
 				var data = {
 					"newType":"1",
-					"pageNum":"1"
+					"pageNum":1
 				}
 			    $scope.tabs = {
 			    	"tab1":true,
@@ -17,7 +18,7 @@ app.controller('indexCtrl',['$scope','$injector',
 			    		this["tab"+id] = true;
 			    		this.loadInfo({
 			    			"newType":""+id,
-			    			"pageNum":"1"
+			    			"pageNum":1
 			    		})
 			    		
 			    	},

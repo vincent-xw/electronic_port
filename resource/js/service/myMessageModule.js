@@ -8,12 +8,29 @@ app.factory('myMessageLouder',function($http){
 
               function(resp){
 
-                return resp;
+                return resp.data;
 
               },
               function(resp){
 
-                return resp;
+                return resp.data;
+
+              });
+        },
+        'delMessage':function(data){
+
+          var url = '/bjport-web-interface/appmessage/delMessage';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
 
               });
         }

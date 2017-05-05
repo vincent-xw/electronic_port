@@ -4,22 +4,34 @@
 		<div class="input-group">
 			<input type="text" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="inputstr">
 			<span class="input-group-btn">
-			<button class="btn btn-primary" type="button">搜索</button>
+			<button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button>
 			</span>
 		</div>
 	</section>
 	<section class="infoList">
 		<ul>
-			<li ng-repeat="data in listInfo.data">
-				<div>
-					<p class="title">标题标题标题标题</p class="title">
-					<span class="fa fa-times close"></span>
-					<p class="content">
-						内容内容内容内容内容内容内容内容内容
+			<li ng-repeat="data in listInfo" >
+				<div >
+					<p class="title" ng-bind="data.msgType | messageType" ng-click="gotoDetail(data)"></p class="title">
+					<span class="fa fa-times close" ng-click="delMessage(data)"></span>
+					<p class="content" ng-bind="data.msgContent" ng-click="gotoDetail(data)">
+						
 					</p>
-					<p class="time"><span>2017年4月13日</span></p>
+					<p class="time" ng-click="gotoDetail(data)"><span ng-bind="data.readTime | date:'yyyy-MM-dd'"></span></p>
 				</div>
 			</li>
+			<li ng-if="listInfo.length == 0">
+				<div>
+					<p>暂未查询到相关信息，请稍后再试</p>
+				</div>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum < ajaxData.pageCount">
+				<a href="javascript:;" ng-click="loadMore(ajaxData.pageNum)">点击加载更多</a>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum >= ajaxData.pageCount">
+				<a href="javascript:;">没有更多了</a>
+			</li>
+			
 		</ul>
 	</section>
 </div>
