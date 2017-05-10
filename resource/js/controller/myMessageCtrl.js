@@ -48,11 +48,11 @@ app.controller('myMessageCtrl',['$scope','$injector','storageService',
 					};
 					if(confirm("确定要删除这条消息吗?")){
 						myMessageLouder.delMessage(data).then(function(resp){
-							if(resp.data.code == 200){
+							if(resp.code == 200){
 								alert("消息删除成功");
 							}else{
-								if(resp.data.msg != ""){
-									alert(resp.data.msg);
+								if(resp.msg != ""){
+									alert(resp.msg);
 								}else{
 									alert("删除失败，肯能是网络问题，请稍后再试");
 								}
