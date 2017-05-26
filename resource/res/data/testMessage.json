@@ -1,0 +1,64 @@
+{
+  "code": "200",
+  "msg": "查询成功！",
+  "data": {
+    "pageCount": 1,
+    "pageNum": 1,
+    "dataValue": [
+      {
+        "id": null,
+        "version": 0,
+        "createTime": 1477901956000,
+        "guid": "8d9a208f-3f7a-446f-b9e2-26411fd9e325",
+        "msgContent": "根据XXXX年公务员录用工作的统一安排，现将新录用人员报到时间及有关事项公告如下： 一、报到时间XXXX年XX月XX日（周日）9：00。二、报到地点北京海关四层第五会议室（朝阳区光华路甲10号）。三、报到时要提交的材料",
+        "msgType": "1",
+        "msgSource": "zq_admin",
+        "userId": "zq_hui",
+        "isRead": 1,
+        "readTime": 1488058830716,
+        "isDel": 0,
+        "delTime": 1492675312820,
+        "sendUid": "53c91492-e66e-44ac-bfd7-358c4b6adbd4",
+        "sendNo": "3e63721d-9eae-4220-b78b-fffa0260039e",
+        "msgStateAndroid": "100",
+        "msgStateIos": "100"
+      },
+      {
+        "id": null,
+        "version": 0,
+        "createTime": 1477901956000,
+        "guid": "8d9a208f-3f7a-446f-b9e2-26411fd9e325",
+        "msgContent": "根据XXXX年公务员录用工作的统一安排，现将新录用人员报到时间及有关事项公告如下： 一、报到时间XXXX年XX月XX日（周日）9：00。二、报到地点北京海关四层第五会议室（朝阳区光华路甲10号）。三、报到时要提交的材料",
+        "msgType": "1",
+        "msgSource": "zq_admin",
+        "userId": "zq_hui",
+        "isRead": 1,
+        "readTime": 1488058830716,
+        "isDel": 0,
+        "delTime": 1492675312820,
+        "sendUid": "53c91492-e66e-44ac-bfd7-358c4b6adbd4",
+        "sendNo": "3e63721d-9eae-4220-b78b-fffa0260039e",
+        "msgStateAndroid": "100",
+        "msgStateIos": "100"
+      },
+      {
+        "id": null,
+        "version": 0,
+        "createTime": 1477901956000,
+        "guid": "8d9a208f-3f7a-446f-b9e2-26411fd9e325",
+        "msgContent": "根据XXXX年公务员录用工作的统一安排，现将新录用人员报到时间及有关事项公告如下： 一、报到时间XXXX年XX月XX日（周日）9：00。二、报到地点北京海关四层第五会议室（朝阳区光华路甲10号）。三、报到时要提交的材料",
+        "msgType": "1",
+        "msgSource": "zq_admin",
+        "userId": "zq_hui",
+        "isRead": 1,
+        "readTime": 1488058830716,
+        "isDel": 0,
+        "delTime": 1492675312820,
+        "sendUid": "53c91492-e66e-44ac-bfd7-358c4b6adbd4",
+        "sendNo": "3e63721d-9eae-4220-b78b-fffa0260039e",
+        "msgStateAndroid": "100",
+        "msgStateIos": "100"
+      }
+    ]
+  }
+}

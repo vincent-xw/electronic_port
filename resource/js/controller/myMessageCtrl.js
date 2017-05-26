@@ -50,11 +50,12 @@ app.controller('myMessageCtrl',['$scope','$injector','storageService',
 						myMessageLouder.delMessage(data).then(function(resp){
 							if(resp.code == 200){
 								alert("消息删除成功");
+								$scope.searchFunction();
 							}else{
 								if(resp.msg != ""){
 									alert(resp.msg);
 								}else{
-									alert("删除失败，肯能是网络问题，请稍后再试");
+									alert("删除失败，可能是网络问题，请稍后再试");
 								}
 							}
 						});

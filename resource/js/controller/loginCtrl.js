@@ -10,19 +10,21 @@ app.controller('loginCtrl',['$scope','$injector','storageService',
 					location.reload(true);
 				}
 				$scope.title="登录";
+				$scope.loginTips = "登录";
 				$scope.login = function(data){
 					var data = {
 						"userNo":data.userNo,
 						"userPwd":data.userPwd
 					};
-					$scope.loginTips = false;
+					$scope.loginTips = "登录中";
 					loginLouder.login(data).then(function(resp){
-						$scope.loginTips = true;
+						$scope.loginTips = "登录";
 						if(resp.data.code == "200"){
+							
 							storageService.setUserInfo(resp.data.data);
 							window.location.href="#!/myMessage";
 						}else{
-							$scope.loginTips = false;
+							
 							alert('登录失败');
 						}
 					});
