@@ -14,14 +14,19 @@
 	<section class="infoList">
 		<ul>
 			<li ng-repeat="data in listInfo" >
-				<div >
-					<p class="title" ng-bind="data.msgType | messageType" ng-click="gotoDetail(data)"></p class="title">
-					<span class="fa fa-times close" ng-click="delMessage(data)"></span>
-					<p class="content" ng-bind="data.msgContent" ng-click="gotoDetail(data)">
-						
-					</p>
-					<p class="time" ng-click="gotoDetail(data)"><span ng-bind="data.readTime | date:'yyyy-MM-dd'"></span></p>
+				<div class="icon">
+					<img src="./res/img/tz.png" alt="">
 				</div>
+				<div class="content">
+					<p class="msgtitle" ng-click="gotoDetail(data)">
+						<span ng-bind="data.msgType | messageType" ></span><br>
+						<span ng-bind="data.readTime | date:'yyyy-MM-dd'" style="font-size: 10px;"></span>
+					</p>
+					<div class="delMessage" ng-click="delMessage(data)"></div>
+					<p class="msgContent" ng-bind="data.msgContent" ng-click="gotoDetail(data)">
+					</p>
+				</div>
+				<div class="clearfix"></div>
 			</li>
 			<li ng-if="listInfo.length == 0">
 				<div>

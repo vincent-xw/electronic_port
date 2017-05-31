@@ -14,7 +14,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/index.css',
                         'js/controller/indexCtrl.js',
                         'js/service/indexModule.js'
                         ]);
@@ -32,7 +31,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/newsDetail.css',
                         'js/controller/newsDetailCtrl.js',
                         'js/service/newsDetailModule.js'
                         ]);
@@ -50,14 +48,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/search.css',
                         'js/controller/searchCtrl.js',
                         'js/service/searchModule.js'
                         ]);
                 }]
             }
         })
-        .state('search.subsearch', {
+        .state('subsearch', {
             url: '/subsearch',
             views: {
                 '': {
@@ -68,7 +65,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/search.css',
                         'js/controller/searchCtrl.js',
                         'js/service/searchModule.js'
                         ]);
@@ -86,8 +82,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/newsDetail.css',
-                        'css/searchList.css',
                         'js/controller/searchListCtrl.js',
                         'js/service/searchListModule.js'
                         ]);
@@ -105,8 +99,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/newsDetail.css',
-                        'css/searchList.css',
                         'js/controller/searchListContentCtrl.js',
                         'js/service/searchListContentModule.js'
                         ]);
@@ -124,7 +116,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/login.css',
                         'js/controller/loginCtrl.js',
                         'js/service/loginModule.js'
                         ]);
@@ -142,7 +133,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/myMessage.css',
                         'js/controller/myMessageCtrl.js',
                         'js/service/myMessageModule.js'
                         ]);
@@ -160,7 +150,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
             resolve: { 
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
-                        'css/myMessage.css',
                         'js/controller/myMessageDetailCtrl.js',
                         'js/service/myMessageDetailModule.js'
                         ]);

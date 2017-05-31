@@ -1,9 +1,9 @@
 <div ng-include="'tpl/common/messageheader.html'"></div>
 <div class="contentContainer">
-	<section class="headerDetail">
+	<section class="headerDetail_1">
+		<h3><span ng-bind="listInfo.msgType | messageType"></span></h3>
 		<p class="text-right">
-			<span>消息类型:</span><span ng-bind="listInfo.msgType | messageType"></span> 
-			<span>来源:</span><span ng-bind="listInfo.msgSource "></span> <br>
+			<span>来源:</span><span ng-bind="listInfo.msgSource1"></span>
 			<span>接收时间:</span><span ng-bind="listInfo.createTime | date:'yyyy-MM-dd'"></span> 
 			<span>阅读时间:</span><span ng-bind="listInfo.readTime | date:'yyyy-MM-dd'"></span> 
 		</p>

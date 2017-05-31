@@ -10,7 +10,8 @@ app.filter('to_trusted', ['$sce', function ($sce) {
 			console.log(obj);
 			var data = {
 	    		"1":"系统通知",
-	    		"2":"回执消息"
+	    		"2":"回执消息",
+	    		"6":"督办提醒"
 	    	};
 	    	return data[obj];
 			
