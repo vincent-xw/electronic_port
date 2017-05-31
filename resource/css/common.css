@@ -13,16 +13,27 @@ html{
 	display: inline-block;
 	position: absolute;
 	font-size: 2rem;
-	height: 4.2857rem;
-	line-height: 4.2857rem;
+	height: 3.2142rem;
+	line-height: 3.2142rem;
 	padding-left: 1rem;
 	color: #ffffff;
 }
 .title{
-	height: 4.2857rem;
-	line-height: 4.2857rem;
+	height: 3.2142rem;
+	line-height: 3.2142rem;
+	font-weight: normal;
 	color: #ffffff;
 	margin: 0;
+}
+.goback{
+	background: url("/res/img/back.png") no-repeat;
+	width: 12px;
+	background-size: 70%;
+    background-position-y: 50%;
+    margin-left: 12px;
+}
+.userImg{
+	font-size: 24px;
 }
 .navTab{
 	width: 100%;
@@ -42,9 +53,21 @@ html{
 }
 .navTab ul li{
 	width: 33.333%;
-	font-size: 1rem;
 	display: inline-block;
 	text-align: center;
+	font-size: 0.7142rem;
+}
+.navTab ul li p{
+	margin-bottom: 0;
+	line-height: 10px;
+	margin: 6px 0;
+}
+.navTab ul li .active{
+	color: #D33B30;
+}
+.navTab ul li img{
+	width: 1.5rem;
+	margin-top: 7px;
 }
 .buttomIcon{
 	font-size: 2rem;
@@ -52,5 +75,6 @@ html{
 }
 body{
 	padding-bottom: 3rem;
-	padding-top: 4.2857rem;
+	padding-top: 3.2142rem;
+	background: #F9F7FF;
 }

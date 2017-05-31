@@ -57,6 +57,24 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }]
             }
         })
+        // .state('search.subsearch', {
+        //     url: '/search/',
+        //     views: {
+        //         '': {
+        //             templateUrl: 'tpl/search.html',
+        //             controller: 'searchCtrl'
+        //         }
+        //     },
+        //     resolve: { 
+        //         loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+        //             return $ocLazyLoad.load([
+        //                 'css/search.css',
+        //                 'js/controller/searchCtrl.js',
+        //                 'js/service/searchModule.js'
+        //                 ]);
+        //         }]
+        //     }
+        // })
         .state('searchList', {
             url: '/searchList',
             views: {

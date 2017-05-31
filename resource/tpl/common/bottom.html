@@ -2,20 +2,20 @@
 	<ul>
 		<li ng-click="gotopanel('/index')">
 			<div>
-				<span class="fa fa-file-text-o buttomIcon"></span>
-				<p>信息服务</p>
+				<img ng-src="{{icon.xxfw}}" alt="">
+				<p ng-class="{'active':icon.xxfw == './res/img/xxfw_a.png'}">信息服务</p>
 			</div>
 		</li>
 		<li ng-click="gotopanel('/search')">
 			<div>
-				<span class="fa fa-search buttomIcon"></span>
-				<p>信息服务</p>
+				<img ng-src="{{icon.ywcx}}" alt="">
+				<p ng-class="{'active':icon.ywcx == './res/img/ywcx_a.png'}">业务查询</p>
 			</div>
 		</li>
 		<li ng-click="gotopanel('/myMessage')">
 			<div>
-				<span class="fa fa-commenting-o buttomIcon"></span>
-				<p>信息服务</p>
+				<img ng-src="{{icon.wdxx}}" alt="">
+				<p ng-class="{'active':icon.wdxx == './res/img/wdxx_a.png'}">我的消息</p>
 			</div>
 		</li>
 	</ul>

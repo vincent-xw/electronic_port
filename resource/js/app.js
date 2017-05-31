@@ -71,4 +71,9 @@ app.config(['$controllerProvider', '$compileProvider', '$filterProvider', '$prov
     .config(['$httpProvider', function($httpProvider) {
         $httpProvider.interceptors.push('sessionInjector');
     }])
+    .run(function(){
+        $("input[type='search']").submit(function(e){
+            e.preventDefault();
+        });
+    });
 ;   

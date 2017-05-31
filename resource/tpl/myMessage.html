@@ -1,11 +1,14 @@
 <div ng-include="'tpl/common/messageheader.html'"></div>
 <div class="contentContainer">
 	<section class="headerDetail">
-		<div class="input-group">
-			<input type="text" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="inputstr">
-			<span class="input-group-btn">
-			<button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button>
-			</span>
+		<div class="search-group">
+			<form action>
+				<span class="searchIcon-left"><img src="./res/img/search.png" alt=""></span><input type="search" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="inputstr">
+				<div class="clearfix"></div>
+				<!-- <button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button> -->
+			</form>
+			
+			
 		</div>
 	</section>
 	<section class="infoList">
