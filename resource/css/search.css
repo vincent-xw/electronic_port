@@ -33,3 +33,6 @@
     padding: 0.5rem 0;
     height: 2.5rem;
 }
+.subFunList{
+	list-style: none;
+}
