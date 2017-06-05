@@ -50,6 +50,40 @@ app.factory('searchListLouder',function($http){
                 return resp.data;
 
               });
+        },
+        'getAirList':function(data){
+
+          var url = '/bjport-web-interface/apphkgs/getHkgs';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
+        },
+        'getPersonList':function(data){
+
+          var url = '/bjport-web-interface/apphkgs/getPerson';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
         }
       };
   });

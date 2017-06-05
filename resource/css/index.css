@@ -286,6 +286,42 @@
 	font-size: 14px;
 	color: #9B9B9B;
 }
+/*airSearchList*/
+.airDetail{
+	width: 100%;
+	padding: 12px 17px;
+    background: #FFFFFF;
+}
+.airDetail a{
+	color: #333333;
+}
+.airDetail ul{
+	list-style: none;
+	padding-left: 0;
+}
+.airDetail li{
+	padding:  13px 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+.airDetail li:last-child{
+	border: 0;
+}
+.airDetail p{
+	margin-bottom: 0;
+}
+.airDetail .detailTitle{
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+}
+.airDetail .airContent .title{
+	font-size: 12px;
+	line-height: 20px;
+	color: #666666;
+}
+.airDetail .airContent .content{
+	font-size: 12px;
+}
 /*news*/
 .funcList{
 	padding: 0;

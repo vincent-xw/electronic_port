@@ -9,12 +9,16 @@
 			</form>
 		</div>
 	</section>
-	<section class="contentDetail">
+	<section class=" airDetail">
 		<ul>
 			<li ng-repeat="data in regulationList">
-				<div ng-click="goToDetail(data)">
-					<p class="searchTitle"><span class="content" ng-bind="data.subject | subject"></span></p>
-					<p class="searchPart"><span ng-bind="data.creatorname | creatorname" ></span><span  ng-bind="data.createtime | date:'yyyy-MM-dd'"></p>
+				<div>
+					<p class="detailTitle"><span>营业执照编号:</span><span class="airTitleContent" ng-bind="data.numbers "></span></p>
+					<p class="airContent"><span class="title">公司名称:</span><span class="content" ng-bind="data.gsname" ></span></p>
+					<p class="airContent"><span class="title">负责人姓名:</span><span class="content" ng-bind="data.rname" ></span></p>
+					<p class="airContent"><span class="title">联系电话(办公):</span><span class="content" ng-bind="data.bgtelephone" ></span></p>
+					<p class="airContent"><span class="title">联系电话(手机):</span><span class="content" ng-bind="data.sjtelephone" ></span></p>
+					<p class="airContent"><span class="title">通信地址:</span><span class="content" ng-bind="data.address" ></span></p>
 					
 				</div>
 			</li>

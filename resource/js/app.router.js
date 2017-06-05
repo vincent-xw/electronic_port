@@ -88,6 +88,23 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }]
             }
         })
+        .state('airSearchList', {
+            url: '/airSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/airSearchList.html',
+                    controller: 'airSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/airSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
         .state('searchListContent', {
             url: '/searchListContent',
             views: {
