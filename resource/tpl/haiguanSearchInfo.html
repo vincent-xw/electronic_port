@@ -1,0 +1,15 @@
+<div ng-include="'tpl/common/messageheader.html'"></div>
+<div class="contentContainer">
+	<section class="headerDetail_1">
+		<h3><span ng-bind="listInfo.msgType | messageType"></span></h3>
+		<p class="text-right">
+			<span>来源:</span><span ng-bind="listInfo.msgSource1"></span>
+			<span>接收时间:</span><span ng-bind="listInfo.createTime | date:'yyyy-MM-dd'"></span> 
+			<span>阅读时间:</span><span ng-bind="listInfo.readTime | date:'yyyy-MM-dd'"></span> 
+		</p>
+	</section>
+	<section class="contentDetail">
+		<p ng-bind-html="listInfo.msgContent | to_trusted"></p>
+	</section>
+</div>
+<div ng-include="'tpl/common/bottom.html'"></div>

@@ -84,6 +84,91 @@ app.factory('searchListLouder',function($http){
                 return resp.data;
 
               });
+        },
+        'getGongshangList':function(data){
+
+          var url = '/bjport-web-interface/appqyzx/getGs';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
+        },
+        'getHaiguanList':function(data){
+
+          var url = '/bjport-web-interface/appqyzx/getHg';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
+        },
+        'getHaiguanInfo':function(data){
+
+          var url = '/bjport-web-interface/appqyzx/getHgDt';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
+        },
+        'getguojianList':function(data){
+
+          var url = '/bjport-web-interface/appqyzx/getGj';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
+        },
+        'getjckList':function(data){
+
+          var url = '/bjport-web-interface/appjck/getJckqy';
+
+          return $http.post(url,data).then(
+
+              function(resp){
+
+                return resp.data;
+
+              },
+              function(resp){
+
+                return resp.data;
+
+              });
         }
       };
   });

@@ -88,6 +88,108 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 }]
             }
         })
+        .state('gongshangSearchList', {
+            url: '/gongshangSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/gongshangSearchList.html',
+                    controller: 'gongshangSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/gongshangSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('haiguanSearchList', {
+            url: '/haiguanSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/haiguanSearchList.html',
+                    controller: 'haiguanSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/haiguanSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('haiguanSearchInfo', {
+            url: '/haiguanSearchInfo',
+            views: {
+                '': {
+                    templateUrl: 'tpl/haiguanSearchInfo.html',
+                    controller: 'haiguanSearchInfoCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/haiguanSearchInfoCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('guojianSearchList', {
+            url: '/guojianSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/guojianSearchList.html',
+                    controller: 'guojianSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/guojianSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('guoshuiSearchList', {
+            url: '/guoshuiSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/guoshuiSearchList.html',
+                    controller: 'guoshuiSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/guoshuiSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('jckSearchList', {
+            url: '/jckSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/jckSearchList.html',
+                    controller: 'jckSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/jckSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
         .state('searchList', {
             url: '/searchList',
             views: {
@@ -117,6 +219,23 @@ app.config(['$stateProvider', '$urlRouterProvider', '$provide','$ocLazyLoadProvi
                 loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load([
                         'js/controller/airSearchListCtrl.js',
+                        'js/service/searchListModule.js'
+                        ]);
+                }]
+            }
+        })
+        .state('personSearchList', {
+            url: '/personSearchList',
+            views: {
+                '': {
+                    templateUrl: 'tpl/personSearchList.html',
+                    controller: 'personSearchListCtrl'
+                }
+            },
+            resolve: { 
+                loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                        'js/controller/personSearchListCtrl.js',
                         'js/service/searchListModule.js'
                         ]);
                 }]

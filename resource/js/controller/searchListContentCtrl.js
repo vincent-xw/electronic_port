@@ -5,7 +5,8 @@ app.controller('searchListContentCtrl',['$scope','$injector','$location',
 				$scope.search = $location.search();
 				$scope.title="高风险物品预警";
 				$scope.searchData = {
-					"inputstr":""
+					"inputstr":"",
+					"pageNum":1
 				}
 				$scope.searchFunction = function(){
 					searchListContentLouder.getRegulationList($scope.searchData).then(function(resp){
@@ -19,7 +20,11 @@ app.controller('searchListContentCtrl',['$scope','$injector','$location',
 					$scope.searchData.inputstr = $scope.searchStr;
 					$scope.searchFunction();
 				}
-				
+				$scope.loadMore = function(pageNum){
+					$scope.searchData.pageNum=pageNum +1;
+					$scope.searchFunction();
+
+				}
 			}
 		);
 	}

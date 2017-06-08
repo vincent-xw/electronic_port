@@ -7,7 +7,6 @@ app.filter('to_trusted', ['$sce', function ($sce) {
 .filter('messageType', function(){
 
 	return function(obj){
-		console.log(obj);
 		var data = {
     		"1":"系统通知",
     		"2":"回执消息",
@@ -34,6 +33,17 @@ app.filter('to_trusted', ['$sce', function ($sce) {
 			obj = "未知";
 		}
     	return obj;
+		
+	};
+})
+.filter('sex', function(){
+
+	return function(obj){
+		var data = {
+    		"0":"女",
+    		"1":"男"
+    	};
+    	return data[obj];
 		
 	};
 })

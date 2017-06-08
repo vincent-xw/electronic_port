@@ -1,0 +1,37 @@
+<div ng-include="'tpl/common/messageheader.html'"></div>
+<div class="contentContainer">
+	<section class="headerDetail">
+		<div class="search-group">
+			<form>
+				<span class="searchIcon-left"><img src="./res/img/search.png" alt=""></span><input type="search" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="searchStr" ng-enter="clickSearch()">
+				<div class="clearfix"></div>
+				<!-- <button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button> -->
+			</form>
+		</div>
+	</section>
+	<section class=" airDetail">
+		<ul>
+			<li ng-repeat="data in regulationList">
+				<div ng-click="goToDetail(data)">
+					<p class="detailTitle"><span>企业海关代码:</span><span class="airTitleContent" ng-bind="data.hgcode "></span></p>
+					<p class="airContent"><span class="title">企业名称:</span><span class="content" ng-bind="data.busname" ></span></p>
+					<p class="airContent"><span class="title">社会统一信用代码:</span><span class="content" ng-bind="data.unicode" ></span></p>
+					<p class="airContent"><span class="title">备案时间:</span><span class="content" ng-bind="data.badate" ></span></p>
+				</div>
+			</li>
+			<li ng-if="regulationList.length == 0">
+				<div>
+					<p>暂未查询到相关信息，请稍后再试</p>
+				</div>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum < ajaxData.pageCount">
+				<a href="javascript:;" ng-click="loadMore(ajaxData.pageNum)">点击加载更多</a>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum >= ajaxData.pageCount">
+				<a href="javascript:;">没有更多了</a>
+			</li>
+			
+		</ul>
+	</section>
+</div>
+<div ng-include="'tpl/common/bottom.html'"></div>

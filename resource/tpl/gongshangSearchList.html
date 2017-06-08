@@ -1,0 +1,46 @@
+<div ng-include="'tpl/common/messageheader.html'"></div>
+<div class="contentContainer">
+	<section class="headerDetail">
+		<div class="search-group">
+			<form>
+				<span class="searchIcon-left"><img src="./res/img/search.png" alt=""></span><input type="search" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1" ng-model="searchStr" ng-enter="clickSearch()">
+				<div class="clearfix"></div>
+				<!-- <button class="btn btn-primary" type="button" ng-click="clickSearch()">搜索</button> -->
+			</form>
+		</div>
+	</section>
+	<section class=" airDetail">
+		<ul>
+			<li ng-repeat="data in regulationList">
+				<div>
+					<p class="detailTitle"><span>注册号:</span><span class="airTitleContent" ng-bind="data.unicode "></span></p>
+					<p class="airContent"><span class="title">企业名称:</span><span class="content" ng-bind="data.busname" ></span></p>
+					<p class="airContent"><span class="title">类型:</span><span class="content" ng-bind="data.gtype" ></span></p>
+					<p class="airContent"><span class="title">法定代表人:</span><span class="content" ng-bind="data.fdperson" ></span></p>
+					<p class="airContent"><span class="title">注册资本:</span><span class="content" ng-bind="data.regassets" ></span></p>
+					<p class="airContent"><span class="title">成立日期:</span><span class="content" ng-bind="data.founddate | date:'yyyy-MM-dd'" ></span></p>
+					<p class="airContent"><span class="title">住所:</span><span class="content" ng-bind="data.abode" ></span></p>
+					<p class="airContent"><span class="title">经营期限自:</span><span class="content" ng-bind="data.startdate" ></span></p>
+					<p class="airContent"><span class="title">经营期限至:</span><span class="content" ng-bind="data.enddate" ></span></p>
+					<p class="airContent"><span class="title">登记机关:</span><span class="content" ng-bind="data.regoffice" ></span></p>
+					<p class="airContent"><span class="title">核准日期:</span><span class="content" ng-bind="data.ratifydate" ></span></p>
+					<p class="airContent"><span class="title">登记状态:</span><span class="content" ng-bind="data.regstate" ></span></p>
+					
+				</div>
+			</li>
+			<li ng-if="regulationList.length == 0">
+				<div>
+					<p>暂未查询到相关信息，请稍后再试</p>
+				</div>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum < ajaxData.pageCount">
+				<a href="javascript:;" ng-click="loadMore(ajaxData.pageNum)">点击加载更多</a>
+			</li>
+			<li class="text-center" ng-if="ajaxData.pageNum >= ajaxData.pageCount">
+				<a href="javascript:;">没有更多了</a>
+			</li>
+			
+		</ul>
+	</section>
+</div>
+<div ng-include="'tpl/common/bottom.html'"></div>
