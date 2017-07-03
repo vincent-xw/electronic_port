@@ -11,7 +11,7 @@ app.controller('commonCtrl',['$scope','$injector','$location',
 					var path = $location.path();
 					var pathContainer = [
 						["/index","/newsDetail"],
-						["/search","/subsearch","/searchList","/searchListContent"],
+						["/search","/subsearch","/searchList","/searchListContent","/guoshuiSearchList","/guojianSearchList"],
 						["/login","/myMessage","/myMessageDetail"]
 					];
 					var i = 0,j = 0;
