@@ -8,7 +8,7 @@ app.controller('haiguanSearchInfoCtrl',['$scope','$injector','$location',
 					"inputstr":$scope.search.id
 				};
 				searchListLouder.getHaiguanInfo(data).then(function(resp){
-					$scope.haiguanInfo = resp.data.data;
+					$scope.haiguanInfo = resp.data.dataValue[0];
 				});
 			}
 		);

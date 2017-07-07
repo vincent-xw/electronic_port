@@ -1,15 +1,22 @@
 <div ng-include="'tpl/common/messageheader.html'"></div>
 <div class="contentContainer">
 	<section class="headerDetail_1">
-		<h3><span ng-bind="listInfo.msgType | messageType"></span></h3>
-		<p class="text-right">
-			<span>来源:</span><span ng-bind="listInfo.msgSource1"></span>
-			<span>接收时间:</span><span ng-bind="listInfo.createTime | date:'yyyy-MM-dd'"></span> 
-			<span>阅读时间:</span><span ng-bind="listInfo.readTime | date:'yyyy-MM-dd'"></span> 
-		</p>
+		<h4 class="text-center"><span ng-bind="haiguanInfo.busname"></span></h4>
 	</section>
 	<section class="contentDetail">
-		<p ng-bind-html="listInfo.msgContent | to_trusted"></p>
+		<p><span>企业中文名称：</span><span ng-bind="haiguanInfo.busname "></span></p>
+		<p><span>法定代表人：</span><span ng-bind="haiguanInfo.fj "></span></p>
+		<p><span>海关注册编码：</span><span ng-bind="haiguanInfo.hcode "></span></p>
+		<p><span>注册日期：</span><span ng-bind="haiguanInfo.indate | date:'yyyy-MM-dd'"></span></p>
+		<p><span>经济类型：</span><span ng-bind="haiguanInfo.jjlx "></span></p>
+		<p><span>经济区划：</span><span ng-bind="haiguanInfo.jjqh "></span></p>
+		<p><span>海关注销标志：</span><span ng-bind="haiguanInfo.logoutflag "></span></p>
+		<p><span>经营类别：</span><span ng-bind="haiguanInfo.jylb "></span></p>
+		<p><span>组织机构代码：</span><span ng-bind="haiguanInfo.officecode "></span></p>
+		<p><span>工商注册地址：</span><span ng-bind="haiguanInfo.reg_add "></span></p>
+		<p><span>注册海关：</span><span ng-bind="haiguanInfo.reg_hg "></span></p>
+		<p><span>信用等级：</span><span ng-bind="haiguanInfo.shview "></span></p>
+		<p><span>行政区划：</span><span ng-bind="haiguanInfo.xzqh "></span></p>
 	</section>
 </div>
 <div ng-include="'tpl/common/bottom.html'"></div>
